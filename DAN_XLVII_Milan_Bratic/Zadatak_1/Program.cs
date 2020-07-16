@@ -13,13 +13,13 @@ namespace Zadatak_1
         static void Main(string[] args)
         {
             Bridge bridge = new Bridge();
-
+            //set max cars from each direction
             int max = 15;
 
             int countS = 0;
             Thread thSouth = new Thread(() =>
             {
-
+                // create and start cars from South
                 while (countS++ < max)
                 {
                     Car car = new Car(bridge);
@@ -34,7 +34,7 @@ namespace Zadatak_1
             int countN = 0;
             Thread thNorth = new Thread(() =>
             {
-
+                // create and start cars from North
                 while (countN++ < max)
                 {
                     Car car = new Car(bridge);
